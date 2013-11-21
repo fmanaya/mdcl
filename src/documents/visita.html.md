@@ -1,0 +1,31 @@
+---
+title: "Visita"
+layout: mdcl
+isPage: true
+---
+
+<ul data-orbit>
+  <li>
+    <img src="images/mdjgcl-1.jpg" />
+    <div class="orbit-caption">11111...</div>
+  </li>
+  <li>
+    <img src="images/mdjgcl-2.jpg" />
+    <div class="orbit-caption">222222...</div>
+  </li>
+  
+</ul>
+
+# Cómo llegar  
+plano, dirección, Coordenadas GPS; Posibilidad de recibir por mail todos los datos. Sería una buena forma de ir obteniendo direcciones a las que enviar comunicación del Museo y de Amigos.
+
+
+# Horarios / Precio de entradas
+
+
+# Visitas guiadas, Audio guías
+
+
+# Exposición temporal
+
+

@@ -1,29 +1,68 @@
 <!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="<%= @getLang().htmlLang %>" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="<%= @getLang().htmlLang %>" > <!--<![endif]-->
 
 <head>
   <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
   <meta name="viewport" content="width=device-width">
   <title><%= @getPreparedTitle() %></title>
 
   <%- @getBlock("meta").toHTML() %>
   <%- @getBlock("styles").add(["/styles/style.css"]).toHTML() %>
   
-  <script src="<%= @baseurl %>/vendor/foundation/js/vendor/custom.modernizr.js"></script>
+  <script src="/vendor/foundation/js/vendor/custom.modernizr.js"></script>
 
 </head>
 <body>
+   
+   
+	<h1><%= @getLang().title %>  || <%= @getUrlLang() %> </h1>
 
-	<%- @content %>
+	<% if @getUrlLang()=='es': %>
+		<%- @partial('menuFZ.html.eco', {menuItems: @generateMenu(@document.url, "getDocsInLangES"), locale: @getLang()}) %>
+	<% else if @getUrlLang()=='en': %>
+		<%- @partial('menuFZ.html.eco', {menuItems: @generateMenu(@document.url, "getDocsInLangEN"), locale: @getLang()}) %>
+	<% else if @getUrlLang()=='fr': %>
+		<%- @partial('menuFZ.html.eco', {menuItems: @generateMenu(@document.url, "getDocsInLangFR"), locale: @getLang()}) %>
+	<% end %> 
+
+
+
+
+<div class="row">
+  <div class="large-2 columns">
+  <pre>
+  	<%= @site.url %>
+  	<%= @getBaseUrl() %>
+  	<%= @getEnvironment() %>
+  </pre>	
+  </div>
+  <div class="large-7 columns">
+  	<%- @content %>
+  </div>
+  <div class="large-3 columns">
+
+ 
+	<%- @partial('lang.html.eco', {langKK: @getLang()}) %>
+
+	</div>
+</div>
+
+
+
+	<- @partial('footer.html.eco') >
+
+
+
 
 	<script>
   	document.write('<script src=' +
-  	('__proto__' in {} ? 'vendor/foundation/js/vendor/zepto' : 'vendor/foundation/js/vendor/jquery') +
+  	('__proto__' in {} ? '/vendor/foundation/js/vendor/zepto' : 'vendor/foundation/js/vendor/jquery') +
   	'.js><\/script>')
   </script>
   
-  <%- @getBlock("scripts").add(["vendor/foundation/js/foundation.min.js","scripts/script.js"]).toHTML() %>
+  <%- @getBlock("scripts").add(["/vendor/foundation/js/foundation.min.js","scripts/script.js"]).toHTML() %>
 
   <!--
   

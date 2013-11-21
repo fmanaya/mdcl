@@ -1,0 +1,69 @@
+<!-- Define `renderMenu` partial -->
+<% renderSubMenu = (subitems, nivel) => %>
+	<% for sitem in subitems: %>
+		<!-- Highlight menu sitem if its `sitem.state` is not false -->
+		<li class="<% if sitem.state: %>active<% end %> <% if sitem.children: %>has-dropdown<% end %>">
+		   <!-- Remove link if we�re currently viewing this document -->
+			<% if sitem.state != 'current': %>
+				<a href="<%= sitem.url %>"><%= sitem.title %></a>
+			<% else: %>
+				<strong><%= sitem.title %></strong>
+			<% end %>
+			<!-- Render submenu if sitem has children -->
+			<% if sitem.children: %>
+				<ul class="dropdown">
+					<%- renderSubMenu(sitem.children, nivel+1) %>
+				</ul>
+			<% end %>
+		</li>
+	<% end %>
+<% end %>
+
+
+<% renderMenu = (items, nivel=1) => %>
+  <section class="top-bar-section">
+	<!-- Left Nav Section -->
+	<ul class="right">
+		<% for item in items: %>
+			<!-- Highlight menu item if its `item.state` is not false -->
+			<!-- li<% if item.state: %> class="active"<% end %> -->
+			<li class="divider"></li><li class="<% if item.state: %>active<% end %> <% if item.children: %>has-dropdown<% end %>">
+				<% if item.state != 'current': %>
+				
+
+				
+					<a href="<%= item.url %>"><%= @locale.menu[item.title] %> <%= item.menuOrder %></a>
+				<% else: %>
+					<strong><%= @locale.menu[item.title]  %></strong>
+				<% end %>
+				<% if item.children: %>
+					<ul class="dropdown">
+						<%- renderSubMenu(item.children, nivel+1) %>
+					</ul>
+				<% end %>
+			</li>
+		<% end %>
+
+	</ul>
+</section>
+<% end %>
+
+
+
+
+
+<nav class="top-bar">
+	<ul class="title-area">
+		<!-- Title Area -->
+		<li class="name">
+			<h1><a href="/<%= @getUrlLang() %>"> <%= @locale.menu.Home %> </a></h1>
+		</li>
+		<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+		<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+	</ul>
+			
+	<!-- Run `renderMenu` partial aginst passed `menuItems` meta-data  -->	
+	<!--  <%= docpad.log("info",  @menuItems ) %> -->
+	<%= renderMenu @menuItems[0].children %>
+
+</nav>
