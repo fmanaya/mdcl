@@ -34,7 +34,9 @@
     "docpad-plugin-livereload": "~2.5.3",
     "docpad-plugin-coffeescript": "~2.2.2",
     "docpad-plugin-nodesass": "~2.1.1",
-    "docpad-plugin-marked": "~2.1.1"
+    "docpad-plugin-marked": "~2.1.1",
+    "docpad-plugin-menu": "~2.1.0",
+    "docpad-plugin-partials": "~2.8.1"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {

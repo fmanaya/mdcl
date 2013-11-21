@@ -2,6 +2,7 @@
 title: "Comunidad"
 layout: mdcl
 isPage: true
+menuOrder: 7
 ---
 
 # Suscríbete:

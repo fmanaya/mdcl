@@ -2,15 +2,16 @@
 title: "Visita"
 layout: mdcl
 isPage: true
+menuOrder: 2
 ---
 
 <ul data-orbit>
   <li>
-    <img src="images/mdjgcl-1.jpg" />
+    <img src="/images/mdjgcl-1.jpg" />
     <div class="orbit-caption">11111...</div>
   </li>
   <li>
-    <img src="images/mdjgcl-2.jpg" />
+    <img src="/images/mdjgcl-2.jpg" />
     <div class="orbit-caption">222222...</div>
   </li>
   
@@ -19,9 +20,7 @@ isPage: true
 # Cómo llegar  
 plano, dirección, Coordenadas GPS; Posibilidad de recibir por mail todos los datos. Sería una buena forma de ir obteniendo direcciones a las que enviar comunicación del Museo y de Amigos.
 
-
 # Horarios / Precio de entradas
-
 
 # Visitas guiadas, Audio guías
 

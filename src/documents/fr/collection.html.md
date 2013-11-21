@@ -1,8 +1,10 @@
 ---
-title: "Colección"
+title: "Coleccion"
 layout: mdcl
 isPage: true
+menuOrder: 4
 ---
+# FR
 <div class="slideshow-wrapper">
 	<div class="preloader"></div>
 	<ul id="featured2" data-orbit>

@@ -1,12 +1,9 @@
 ---
-title: "Hola"
-layout: mdcl
-isPage: true
+layout: dummy
 ---
 
- <img src="images/logoG.jpg" />
- 
-Si “Amigos de Serrablo” se fundó con el objetivo, ya conseguido hace tiempo, de rescatar de la ruina un grupo de iglesias mozárabes, continuó con la creación de un Museo donde salvaguardar la vieja cultura popular que estaba feneciendo, puede decirse que ya en su madurez consigue alcanzar su tercer gran logro, quizá el de mayor envergadura, un Museo de Dibujo.
-
-Y una vez más debe señalarse que sin el empeño y determinación de Julio Gavín esto tampoco hubiera sido posible. Él que había dibujado y diseccionado con planos, alzados y secciones todas las iglesias de la comarca, que igualmente ningún rincón de la arquitectura popular y cualesquiera de los utensilios y piezas de la vieja sociedad tradicional habían escapado de sus plumillas, él tenía que culminar “su obra” haciendo un Museo sobre algo que siempre le ha apasionado desde crío: el Dibujo.
-
+<% for item in @getCollection("documents").findAll({ url: $startsWith: '/' + @currentLang + '/index'}, [order:1]).toJSON(): %>
+    <div class="article">
+      <%- item.contentRendered %>
+    </div>
+<% end %>

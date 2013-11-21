@@ -2,6 +2,7 @@
 title: "Museo"
 layout: mdcl
 isPage: true
+menuOrder: 3
 ---
 
 # Objetivos 

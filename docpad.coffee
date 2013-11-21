@@ -8,13 +8,93 @@ docpadConfig = {
   # These are variables that will be accessible via our templates
   # To access one of these within our templates, refer to the FAQ: https://github.com/bevry/docpad/wiki/FAQ
 
+  # Ignore Custom Patterns
+  # Can be set to a regex of custom patterns to ignore from the scanning process
+  ignoreCustomPatterns: /.*\.EXCLUDE/ 
+  
+  collections:
+    getDocsInLangES:  ->
+      #docpad.log("info", "en col menu, lang=" + @getUtlLang() )
+      @getCollection("html").findAll({ url: $startsWith:  '/es/' }) 
+    getDocsInLangEN:  ->
+      @getCollection("html").findAll({ url: $startsWith:  '/en/' }) 
+    getDocsInLangFR:  ->
+      @getCollection("html").findAll({ url: $startsWith:  '/fr/' }) 
+      
+     # url: $startsWith: '/' + @currentLang
+      # <% for it in  @getCollection("html").findAll({ url: $startsWith: '/es' + '/' }).toJSON(): %>
+      
+    pages: ->
+      @getCollection("html").findAllLive({isPage:true},[{filename:1}]).on "add", (model) ->
+        model.setMetaDefaults({layout:"default"})
+
   templateData:
+       
+    # -----------------------------
+    # Language Definition
+    
+    currentLang: 'es'
+    
+    locale:
+      en:
+        title: 'Julio Gavín Drawing Museum-Castillo de Larrés'
+        titleHTML: '<h1>How to lose <span>weight</span></h1><h2>in the browser</h2>'
+        slogan: 'The definitive front-end performance guide'
+        url: 'http://browserdiet.com/en'
+        htmlLang: 'en-US'
+        credits: ''
+        menu:
+          Home: 'Julio Gavín Drawing Museum'
+          Visita: 'VISIT'
+          Museo: 'MUSEUM'
+          Objetivos: 'GOALS'
+          Historia: 'HISTORY'
+          Coleccion:  'COLLECTION'
+          Biblioteca: 'LIBRARY'
+          Educacion:  'EDUCATION'
+          Comunidad:  'COMMUNITY'
+          Pirineo:    'PYRENEES'
+          Tienda:     'SHOP'          
+      es:
+        title: 'Museo de Dibujo Julio Gavín-Castillo de Larrés'
+        titleHTML: '<h1>Como perder <span>peso</span></h1><h2>en el navegador</h2>'
+        slogan: 'La guía definitiva para el rendimiento front-end'
+        url: 'http://browserdiet.com'
+        htmlLang: 'es-ES'
+        credits: ''
+        menu:
+          Home: 'Museo de Dibujo Julio Gavín'
+          Visita: 'VISITAR'
+          Museo: 'MUSEO'
+          Coleccion: 'COLECCIÓN'
+          Biblioteca: 'BIBLIOTECA'
+          Educacion: 'EDUCACIÓN'
+          Comunidad: 'COMUNIDAD'
+          Pirineo: 'PIRINEO'
+          Tienda: 'TIENDA'        
+      fr:
+        title: 'Julio Gavín Drawing Museum-Castillo de Larrés'
+        titleHTML: '<h1>Comment perdre du <span>poids</span></h1><h2>dans le navigateur</h2>'
+        slogan: 'Le guide ultime des performances côté client'
+        url: 'http://browserdiet.com/fr'
+        htmlLang: 'fr-FR'
+        credits: ''
+        menu:
+          Home: 'Julio Gavín Dessin Musée'
+          Visita: 'VISITER'
+          Museo: 'MUSEE'
+          Coleccion:  'COLLECTION'
+          Biblioteca: 'BIBLIOTHÈQUE'
+          Educacion:  'ÉDUCATION'
+          Comunidad:  'COMMUNAUTÉ'
+          Pirineo:    'PYRÉNÉES'
+          Tienda:     'BOUTIQUE'        
        
     # Specify some site properties
     site:
       # The production url of our website
       url: "http://www.serrablo.org"
-      
+      assets: "/"
       
 
       # Here are some old site urls that you would like to redirect from
@@ -57,7 +137,29 @@ docpadConfig = {
 
     # Helper Functions
     # ----------------
+    getLang: ->
+      urlLang = @getUrlLang()
+      if  urlLang 
+        currentLang = urlLang
+      else
+        currentLang = @currentLang.toString()
+      return @locale[currentLang]
+      
+    # Get the Absolute URL of a document
+    getUrlLang: ->
+#            return @site.url + (document.url or document.get?('url'))      
+            match = /../i.exec @document.relativePath
+            if match
+              return match[0]
+            else
+              return ''        
 
+    getDocsInCurrentLangKK: ->
+      urlLang = match = /../i.exec @document.relativePath     
+      #docpad.log("info", "en col menu, lang=" + urlLang)
+      return @getCollection("documents").findAll({ url: $startsWith:  + '/'+urlLang+'/' }) 
+       
+      
     # Get the prepared site/document title
     # Often we would like to specify particular formatting to our page's title
     # we can apply that formatting here

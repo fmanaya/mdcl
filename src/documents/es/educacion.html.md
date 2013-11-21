@@ -1,7 +1,8 @@
 ---
-title: "Educación"
+title: "Educacion"
 layout: mdcl
 isPage: true
+menuOrder: 6
 ---
 
 # Visitas colegios, universidades, escuelas de Bellas artes 
