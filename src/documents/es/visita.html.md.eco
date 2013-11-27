@@ -7,11 +7,11 @@ menuOrder: 2
 
 <ul data-orbit>
   <li>
-    <img src="/images/mdjgcl-1.jpg" />
+    <img src="<%= @baseurl %>/images/mdjgcl-1.jpg" />
     <div class="orbit-caption">11111...</div>
   </li>
   <li>
-    <img src="/images/mdjgcl-2.jpg" />
+    <img src="<%= @baseurl %>/images/mdjgcl-2.jpg" />
     <div class="orbit-caption">222222...</div>
   </li>
   

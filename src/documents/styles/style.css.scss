@@ -1,3 +1,78 @@
 @import "vendor/normalize";
 @import "vendor/settings";
 @import "vendor/foundation";
+
+@import url(http://fonts.googleapis.com/css?family=Aldrich/Josefin+Slab:400,600|Quattrocento);
+
+// FOOTER AREA
+.footer-area {
+  background-color: #1f1f1f;
+  color: #fff;
+  min-height: 50px;
+  padding: 20px 0 0 0;
+}
+
+
+h1 {font-family: 'Aldrich', sans-serif; font-weight: 400; }
+.top-bar-section {font-family: 'Aldrich', sans-serif; font-weight: 400; }
+
+
+/*
+$button-bg: #eb974e;
+
+.top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
+  border-left: solid 1px rgb(102, 99, 99);
+}
+
+
+
+
+
+.top-bar-section > ul > li {
+  &:hover {
+    background: darken($button-bg, 5%);
+    color: rgba(255, 255, 255, 1);
+  }
+  &:active {
+    //@include box-shadow(0px 4px 0px #a74d46);
+    background: darken($button-bg,8%);
+  }
+}
+
+
+
+
+padding: 0 15px;
+line-height: 45px;
+background: #3D3C3C;
+
+*/
+
+
+
+/*
+ nav {
+  h2 {
+    font-weight: 300;
+    color: #5c6d7e;
+  }
+  .button {
+    border:0;
+    background: $button-bg;
+    @include box-shadow(0);
+    font-size: emCalc(12px);
+    color: rgba(255,255,255,.8);
+    text-transform: uppercase;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    @include box-shadow(0px 4px 0px #a74d46);
+    &:hover {
+      background: darken($button-bg,5%);
+      color: rgba(255,255,255,1);
+    }
+    &:active {
+      @include box-shadow(0px 4px 0px #a74d46);
+      background: darken($button-bg,8%);
+    }
+  }
+  */

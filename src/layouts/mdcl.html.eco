@@ -4,100 +4,112 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="<%= @baseurl %>/images/favicon.ico">
   <meta name="viewport" content="width=device-width">
   <title><%= @getPreparedTitle() %></title>
 
   <%- @getBlock("meta").toHTML() %>
-  <%- @getBlock("styles").add(["/styles/style.css"]).toHTML() %>
-  
-  <script src="/vendor/foundation/js/vendor/custom.modernizr.js"></script>
+  <%- @getBlock('styles').add(@getStyles()).toHTML() %>
+
+  <script src="<%= @baseurl %>/vendor/foundation/js/vendor/custom.modernizr.js"></script>
 
 </head>
 <body>
+	<!-- HEADER AREA -->
+	<header class="full-width header-area">
+	    <div class="row">
+	    
+	        <div class="small-2 large-4 columns">
+	        </div>
+	        <div class="large-16 columns">
+				<h1><%= @getLang().title %></h1>
+	        </div>
+	        <div class="small-2 large-4 columns">
+	        </div>
+	    </div>
+	</header>
    
-   
-	<h1><%= @getLang().title %>  || <%= @getUrlLang() %> </h1>
+	<!-- NAVIGATION AREA -->
+	<div class="full-width navigation contain-to-grid">
+	    <div class="row">
+	        <div class="small-2 large-4 columns"> 
+	        </div>
+	        <div class="large-16 columns contain-to-grid sticky">
+				<% if @getUrlLang()=='es': %>
+					<%- @partial('menuFZ.html.eco', {menuItems: @generateMenu(@document.url, "getDocsInLangES"), locale: @getLang()}) %>
+				<% else if @getUrlLang()=='en': %>
+					<%- @partial('menuFZ.html.eco', {menuItems: @generateMenu(@document.url, "getDocsInLangEN"), locale: @getLang()}) %>
+				<% else if @getUrlLang()=='fr': %>
+					<%- @partial('menuFZ.html.eco', {menuItems: @generateMenu(@document.url, "getDocsInLangFR"), locale: @getLang()}) %>
+				<% end %> 
+	        </div>
+	        <div class="small-2 large-4 columns"> 
+	        </div>
+	        
+	    </div>
+	</div>   
 
-	<% if @getUrlLang()=='es': %>
-		<%- @partial('menuFZ.html.eco', {menuItems: @generateMenu(@document.url, "getDocsInLangES"), locale: @getLang()}) %>
-	<% else if @getUrlLang()=='en': %>
-		<%- @partial('menuFZ.html.eco', {menuItems: @generateMenu(@document.url, "getDocsInLangEN"), locale: @getLang()}) %>
-	<% else if @getUrlLang()=='fr': %>
-		<%- @partial('menuFZ.html.eco', {menuItems: @generateMenu(@document.url, "getDocsInLangFR"), locale: @getLang()}) %>
-	<% end %> 
 
 
-
-
-<div class="row">
-  <div class="large-2 columns">
-  <pre>
-  	<%= @site.url %>
-  	<%= @getBaseUrl() %>
-  	<%= @getEnvironment() %>
-  </pre>	
-  </div>
-  <div class="large-7 columns">
-  	<%- @content %>
-  </div>
-  <div class="large-3 columns">
-
- 
-	<%- @partial('lang.html.eco', {langKK: @getLang()}) %>
-
+	<!-- CONTENT AREA -->
+	<div class="full-width content-area">
+	    <div class="row">
+	        <div class="small-1 large-2 columns"> 
+			</div>
+			<div class="large-12 columns">
+			
+				<%- @content %>
+				
+			</div>
+	        <div class="small-1 large-2 columns"> 
+				<!-- CHANGE LANG -->
+				<%- @partial('lang.html.eco', {langKK: @getLang()}) %>
+	        </div>
+	    </div>
 	</div>
-</div>
 
 
 
-	<- @partial('footer.html.eco') >
-
+	<!-- FOOTER AREA -->
+	<div class="full-width footer-area">
+	    <div class="row">
+	    	<div class="small-1 large-2 columns"></div>
+				  	    
+	        <div class="large-12 columns">
+				<%- @partial('footer') %>
+	        </div>
+	        
+			<div class="small-1 large-2 columns"></div>
+	    </div>
+	</div>
 
 
 
 	<script>
-  	document.write('<script src=' +
-  	('__proto__' in {} ? '/vendor/foundation/js/vendor/zepto' : 'vendor/foundation/js/vendor/jquery') +
-  	'.js><\/script>')
-  </script>
+  		document.write('<script src=<%= @baseurl %>' + 
+  			('__proto__' in {} ? '/vendor/foundation/js/vendor/zepto' : '/vendor/foundation/js/vendor/jquery') +
+  			'.js><\/script>')
+	</script>
   
-  <%- @getBlock("scripts").add(["/vendor/foundation/js/foundation.min.js","scripts/script.js"]).toHTML() %>
+  <%- @getBlock('scripts').add(@getScripts()).toHTML() %>
 
   <!--
-  
   <script src="vendor/foundation/js/foundation/foundation.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.alerts.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.clearing.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.cookie.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.dropdown.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.forms.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.joyride.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.magellan.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.orbit.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.reveal.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.section.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.tooltips.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.topbar.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.interchange.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.placeholder.js"></script>
-  
   <script src="vendor/foundation/js/foundation/foundation.abide.js"></script>
-  
   -->
   
   <script>
