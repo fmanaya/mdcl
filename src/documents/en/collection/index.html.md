@@ -2,7 +2,7 @@
 title: "Coleccion"
 layout: mdcl
 isPage: true
-menuOrder: 1
+menuOrder: 4
 ---
 # EN
 <div class="slideshow-wrapper">

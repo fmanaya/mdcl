@@ -15,11 +15,11 @@ docpadConfig = {
    collections:
       getDocsInLangES:  ->
          #docpad.log("info", "en col menu, lang=" + @getUtlLang() )
-         @getCollection("html").findAll({ url: $startsWith:  '/es/' }) 
+         @getCollection("html").findAll({isPage:true, url: $startsWith:  '/es/' }) 
       getDocsInLangEN:  ->
-         @getCollection("html").findAll({ url: $startsWith:  '/en/' }) 
+         @getCollection("html").findAll({isPage:true, url: $startsWith:  '/en/' }) 
       getDocsInLangFR:  ->
-         @getCollection("html").findAll({ url: $startsWith:  '/fr/' }) 
+         @getCollection("html").findAll({isPage:true, url: $startsWith:  '/fr/' }) 
       
       # url: $startsWith: '/' + @currentLang
       # <% for it in  @getCollection("html").findAll({ url: $startsWith: '/es' + '/' }).toJSON(): %>
@@ -82,8 +82,8 @@ docpadConfig = {
                Tienda: 'TIENDA'        
                Acerca:     'ACERCA DE'          
          fr:
-            title: 'Julio Gavín Drawing Museum - Castillo de Larrés'
-            titleHTML: 'Julio Gavín Drawing Museum - "Castillo de Larrés"'
+            title: 'Julio Gavín Dessin Musée - Castillo de Larrés'
+            titleHTML: 'Julio Gavín Dessin Musée - "Castillo de Larrés"'
             slogan: 'Le guide ultime des performances côté client'
             url: 'http://browserdiet.com/fr'
             htmlLang: 'fr-FR'
@@ -141,8 +141,8 @@ docpadConfig = {
       # ----------------
       getScripts: ->
          scripts = [
-           @baseurl+"/vendor/foundation/js/foundation.min.js", 
-           @baseurl+"/scripts/script.js"
+           @baseurl + "/vendor/foundation/js/foundation.min.js", 
+           @baseurl + "/scripts/script.js"
          ]
          return scripts;    
 

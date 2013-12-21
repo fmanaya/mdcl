@@ -4,13 +4,19 @@
 
 @import url(http://fonts.googleapis.com/css?family=Aldrich/Josefin+Slab:400,600|Quattrocento);
 
+.header-area {
+  background-color: $topbar-bg-color;
+  color: rgb(156, 142, 142);
+}
 // FOOTER AREA
 .footer-area {
-  background-color: #1f1f1f;
-  color: #fff;
-  min-height: 50px;
-  padding: 20px 0 0 0;
+  background-color: $topbar-bg-color;
+  color: rgb(156, 142, 142);
+/*  min-height: 50px;
+  padding: 20px 0 0 0; */
 }
+
+
 
 
 h1 {font-family: 'Aldrich', sans-serif; font-weight: 400; }

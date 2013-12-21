@@ -1,14 +1,13 @@
 ---
-title: "Home"
+title: "Visitar"
 layout: mdcl
 isPage: true
+menuOrder: 1
 ---
-# EN
 
  <img src="<%= @baseurl %>/images/logoG.jpg" />
  
- 
-Si “Amigos de Serrablo” se fundó con el objetivo, ya conseguido hace tiempo, de rescatar de la ruina un grupo de iglesias mozárabes, continuó con la creación de un Museo donde salvaguardar la vieja cultura popular que estaba feneciendo, puede decirse que ya en su madurez consigue alcanzar su tercer gran logro, quizá el de mayor envergadura, un Museo de Dibujo.
+ 
+If <span data-tooltip class="has-tip" data-options="disable-for-touch:true" title="Tooltips are awesome, You should totally use them!"> " Friends of Serrablo " </span> was founded with the goal because he got some time to rescue from ruin a group of Mozarabic churches , continued with the creation of a Museum where safeguarding the old popular culture that was passing away , it can be said that already at maturity achieves its third great achievement, perhaps larger , a Museum of Drawing .
 
-Y una vez más debe señalarse que sin el empeño y determinación de Julio Gavín esto tampoco hubiera sido posible. Él que había dibujado y diseccionado con planos, alzados y secciones todas las iglesias de la comarca, que igualmente ningún rincón de la arquitectura popular y cualesquiera de los utensilios y piezas de la vieja sociedad tradicional habían escapado de sus plumillas, él tenía que culminar “su obra” haciendo un Museo sobre algo que siempre le ha apasionado desde crío: el Dibujo.
-
+And once again it should be noted that without the commitment and determination of Gavin July this would not have been possible. He had drawn and dissected floorplans , elevations and sections all the churches of the region, which also no corner of the architecture and any utensils and pieces of old traditional society had escaped from their pens , he had to finish " his " making a museum about something that has always fascinated him since kid : Drawing .

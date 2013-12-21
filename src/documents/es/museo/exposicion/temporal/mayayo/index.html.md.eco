@@ -1,0 +1,39 @@
+---
+title: "Mayayo"
+layout: expo
+desde: 01-08-2013
+hasta: 31-10-2013
+nombre: "Collages de Mayayo"
+imgs: [{name: 's167a8i3.jpg', titulo: "Imagen uno"}, {name: "s167a8i4.jpg", titulo: "segunda imagen"} ]
+imagenes:
+	-
+		detailimage: "heliski-img.png"
+      	mainimage: "heliski-g.jpg"
+      	titulo: "Powder South Heliski Guides"
+    -
+      	detailimage: "nuevos-vientos-img.png"
+      	mainimage: "nuevos-vientos.jpg"
+      	titulo: "Centro Experiencial Nuevos Vientos"
+      
+---
+
+<ul data-orbit>
+  <li>
+    <img src="s167a8i3.jpg" />
+    <div class="orbit-caption">MAYAYOoooooooooo.</div>
+  </li>
+  <li>
+    <img src="http://placehold.it/1000x400&text=[ img 2 ]" />
+    <div class="orbit-caption">...</div>
+  </li>
+  <li>
+    <img src="http://placehold.it/1000x400&text=[ img 3 ]" />
+    <div class="orbit-caption">...</div>
+  </li>
+</ul>
+
+
+El **COLLAGE** es una técnica artística que consiste en ensamblar elementos diversos en un todo unificado. El término se aplica sobre todo a las artes plásticas, pero por extensión se puede referir a cualquier otra manifestación artística, como la música, el cine, la literatura o el videoclip. Viene del francés coller, que significa pegar.
+
+El Museo de Dibujo “Julio Gavín-Castillo de Larrés” presenta al artista Ignacio Mayayo con una colección de obras de gran formato, realizadas mediante la técnica del collage, la imaginación, la provocación y el surrealismo hacen de estas obras una serie divertida y diferente aunque ejecutadas con la misma seriedad y destreza con la que se plantea cualquier otra obra plástica. En el texto de presentación, el crítico Manuel Pérez-Lizano Forns señala que estos cuadros collages son "contemplados desde una suerte de varios panoramas para acoger las múltiples danzas de personajes fuera de su lógica pero enlazados de manera verosímil. Personajes, muchos famosos, de dispares épocas con impensable capacidad evocadora pues el pasado, más o menos inmediato, para transformarlo en realidad actual desde sus marcados contrastes (...) Todo inmerso y potenciado por un impecable color que estalla en el lugar idóneo".
+Como dice Roy Lichtenstein: El collage y el dibujo comparten el mismo espíritu.

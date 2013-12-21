@@ -1,1 +1,13 @@
-$topbar-bg-color: #555;
+
+//$body-font-family: 'Josefin Slab', 'Quattrocento', serif,             
+
+$topbar-bg-color: #000;  // fondo 
+
+$topbar-dropdown-bg: #222 !default;
+$topbar-dropdown-link-color: #fff !default;
+
+
+$topbar-link-bg-hover: #2299BB;
+$topbar-link-bg-active: darken($topbar-link-bg-hover, 15%) ;
+
+$topbar-dropdown-label-color: #555 !default;

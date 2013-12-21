@@ -17,4 +17,3 @@
 	<a href="<%= @baseurl %>/fr/index.html">fr</a> 
 <% end %>
 |
-
