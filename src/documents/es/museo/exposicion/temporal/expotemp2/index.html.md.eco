@@ -1,10 +1,18 @@
 ---
 title: "expo2"
 layout: expo
-desde: 10-01-2013
-hasta: 20-03-2013
+desde: 2013-01-10
+hasta: 2013-03-20
 nombre: "Exposición temporal 2"
-imgs: ['s167a8i3.jpg', 's167a8i4.jpg']
+descripcion: Descripción ...
+lugar: donde se realiza la exposicion
+imagenes:
+- nombre: "s167a8i3.jpg"
+  thumbnail: "s167a8i3_th.jpg"
+  titulo: "Imagen 1"
+- nombre: "s167a8i4.jpg"
+  thumbnail: "s167a8i4_th.jpg"
+  titulo: "Imagen 2"
 ---
 
 Vestibulum nec magna et leo molestie pulvinar. Vestibulum sed mi varius erat volutpat rhoncus a sit amet tortor. Suspendisse consectetur in lacus viverra sodales. Phasellus auctor eleifend velit nec posuere. Aenean sollicitudin accumsan varius. Aenean at ante eget leo vulputate faucibus. Ut pretium orci vitae arcu consectetur rhoncus. Mauris consectetur, est vitae tristique euismod, justo nisl adipiscing turpis, at rutrum nunc orci id tortor. Ut convallis id sem nec feugiat. Nullam ac metus ut augue accumsan pharetra tincidunt ac dui. Proin iaculis eget massa eu ultrices. Suspendisse molestie odio sed consectetur euismod. Aliquam in velit porttitor ipsum rhoncus lacinia sed vel massa. Maecenas eu erat ut diam cursus tristique. Proin eu tempor ligula. Morbi ut nisl purus.

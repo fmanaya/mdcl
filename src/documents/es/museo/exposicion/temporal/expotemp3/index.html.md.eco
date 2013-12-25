@@ -1,10 +1,18 @@
 ---
 title: "expo3"
 layout: expo
-desde: 01-09-2012
-hasta: 31-11-2012
+desde: 2012-09-01
+hasta: 2012-11-31
 nombre: "Exposición temporal 3"
-imgs: ['s167a8i3.jpg', 's167a8i4.jpg']
+descripcion: Descripción ...
+lugar: donde se realiza la exposicion
+imagenes:
+- nombre: "s167a8i4.jpg"
+  thumbnail: "s167a8i4_th.jpg"
+  titulo: "Imagen 2"
+- nombre: "s167a8i3.jpg"
+  thumbnail: "s167a8i3_th.jpg"
+  titulo: "Imagen 1"
 ---
 
 

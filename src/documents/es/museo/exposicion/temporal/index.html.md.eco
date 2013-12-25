@@ -4,4 +4,28 @@ layout: mdcl
 isPage: true
 menuOrder: 3111
 ---
+<h1>Exposiciones temporales</h1>
 
+<% for expTemp in @getCollection("documents").findAll({layout:"expo", url: $startsWith:  '/'+@getUrlLang()+'/' },[{desde:-1}]).toJSON(): %>
+
+<div class="panel" style="overflow: hidden;">
+   
+   <a class="th radius" href="<%= expTemp.url %>" style="float:left; margin-right: 1em;">
+      <img src="<%= @getPathFromUrl(expTemp.url) %>/<%= expTemp.imagenes[0].thumbnail %>">
+   </a>
+
+	<div>
+      <h2><%= expTemp.nombre %></h2>
+      <ul style="list-style: none;">
+         <li>Desde <%= @getDateFormatted(expTemp.desde) %> al <%= @getDateFormatted(expTemp.hasta) %></li>
+         <li><%= expTemp.lugar %></li>
+         <li><%= expTemp.descripcion %></li>
+      </ul>
+
+    </div>
+        
+</div>
+	
+	
+	
+<% end %>
