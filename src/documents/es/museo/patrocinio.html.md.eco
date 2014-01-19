@@ -5,9 +5,19 @@ isPage: true
 menuOrder: 31
 ---
 
-# Amigos del Museo
-si se crea 
-# Hacerse socio Amigos Serrablo.
-Link
-# Apadrinar obra: 
-beneficios, condiciones, formulario.
+<div class="row">
+	<div class="large-16 columns">
+		<div class="row">
+			<div class="large-8 columns">
+				<div class="panel">
+					<%- @partial('patrocinio/socios') %>
+				</div>
+			</div>
+			<div class="large-8 columns">
+				<div class="panel">
+					<%- @partial('patrocinio/apadrinar') %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

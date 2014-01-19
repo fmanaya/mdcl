@@ -7,10 +7,10 @@ nombre: "Collages de Mayayo"
 descripcion: Descripcion corta de la exposición
 lugar: donde se realiza la exposicion
 imagenes:
-- nombre: "s167a8i3.jpg"
+- nombre: "s167a8i3_r.jpg"
   thumbnail: "s167a8i3_th.jpg"
   titulo: "Imagen 1"
-- nombre: "s167a8i4.jpg"
+- nombre: "s167a8i4_r.jpg"
   thumbnail: "s167a8i4_th.jpg"
   titulo: "Imagen 2"
 ---

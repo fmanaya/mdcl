@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="<%= @getLang().htmlLang %>" > <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="<%= @getLang().htmlLang %>" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="<%= @getLang().htmlLang %>" > <!--<![endif]-->
 
 <head>
   <meta charset="utf-8">
-  <link rel="shortcut icon" type="image/x-icon" href="<%= @baseurl %>/images/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="<%= @baseurl %>images/favicon.ico">
   <meta name="viewport" content="width=device-width">
   <title><%= @getPreparedTitle() %></title>
 
   <%- @getBlock("meta").toHTML() %>
   <%- @getBlock('styles').add(@getStyles()).toHTML() %>
 
-  <script src="<%= @baseurl %>/vendor/foundation/js/vendor/custom.modernizr.js"></script>
+  <script src="<%= @baseurl %>vendor/foundation/js/vendor/custom.modernizr.js"></script>
 
 </head>
 <body>
@@ -20,7 +20,7 @@
 	    <div class="row">
 	    
 	        <div class="large-14 columns">
-				<!-- h1><%= @getLang().title %></h1 -->
+				<!-- h1><%= @getLang().title %></h1 --> 
 	        </div>
 	        <div class="large-2 columns">
 	        	<!-- CHANGE LANG -->
@@ -33,7 +33,7 @@
 	<div class="full-width navigation contain-to-grid">
 	    <div class="row">
 
-	        <div class="large-14 columns contain-to-grid sticky">
+	        <div class="large-16 columns contain-to-grid sticky">
 				<% if @getUrlLang()=='es': %>
 					<%- @partial('menuFZ.html.eco', {menuItems: @generateMenu(@document.url, "getDocsInLangES"), locale: @getLang()}) %>
 				<% else if @getUrlLang()=='en': %>
@@ -42,7 +42,21 @@
 					<%- @partial('menuFZ.html.eco', {menuItems: @generateMenu(@document.url, "getDocsInLangFR"), locale: @getLang()}) %>
 				<% end %> 
 	        </div>
-	        <div class="small-1 large-2 columns"> 
+	        	        
+	    </div>
+	</div>   
+
+	<!-- breadcrum -->
+	<div class="full-width">
+	    <div class="row">
+
+	        <div class="large-16 columns">
+				<ul class="breadcrumbs">
+				  <li><a href="#">Home</a></li>
+				  <li><a href="#">Features</a></li>
+				  <li class="unavailable"><a href="#">Gene Splicing</a></li>
+				  <li class="current"><a href="#">Cloning</a></li>
+				</ul>
 	        </div>
 	        
 	    </div>
@@ -60,11 +74,15 @@
 
 
 	<!-- FOOTER AREA -->
-	<div class="full-width footer-area">
+
+	<%- @partial('footer') %>
+	        
+	
+	<div class="full-width debug-area">
 	    <div class="row">
 				  	    
-	        <div class="large-14 columns">
-				<%- @partial('footer') %>
+	        <div class="large-16 columns">
+				<%- @partial('debug') %>
 	        </div>
 	        
 			<div class="small-1 large-2 columns"></div>
@@ -75,7 +93,7 @@
 
 	<script>
   		document.write('<script src=<%= @baseurl %>' + 
-  			('__proto__' in {} ? '/vendor/foundation/js/vendor/zepto' : '/vendor/foundation/js/vendor/jquery') +
+  			('__proto__' in {} ? 'vendor/foundation/js/vendor/zepto' : 'vendor/foundation/js/vendor/jquery') +
   			'.js><\/script>')
 	</script>
   

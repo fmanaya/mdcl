@@ -4,27 +4,45 @@ layout: mdcl
 isPage: true
 menuOrder: 2
 ---
-
+<center>
 <ul data-orbit>
   <li>
-    <img src="<%= @baseurl %>/images/mdjgcl-1.jpg" />
+    <!-- img src="<%= @baseurl %>images/mdjgcl-1.jpg" / -->
+    <img src="http://lorempixel.com/500/200/nature/1" alt="" title="" height="300" width="700" />
     <div class="orbit-caption">11111...</div>
   </li>
   <li>
-    <img src="<%= @baseurl %>/images/mdjgcl-2.jpg" />
+    <!-- img src="<%= @baseurl %>images/mdjgcl-2.jpg" / -->
+    <img src="http://lorempixel.com/500/200/nature/2" alt="" title="" height="300" width="700" />
     <div class="orbit-caption">222222...</div>
   </li>
-  
+  <li>
+    <!-- img src="<%= @baseurl %>images/mdjgcl-2.jpg" / -->
+    <img src="http://lorempixel.com/500/200/nature/3" alt="" title="" height="300" width="700" />
+    <div class="orbit-caption">333333...</div>
+  </li>
+  <li>
+    <!-- img src="<%= @baseurl %>images/mdjgcl-2.jpg" / -->
+    <img src="http://lorempixel.com/500/200/nature/4" alt="" title="" height="300" width="700" />
+    <div class="orbit-caption">444444...</div>
+  </li>
 </ul>
+</center>
 
-# Cómo llegar  
-plano, dirección, Coordenadas GPS; Posibilidad de recibir por mail todos los datos. Sería una buena forma de ir obteniendo direcciones a las que enviar comunicación del Museo y de Amigos.
-
-# Horarios / Precio de entradas
-
-# Visitas guiadas, Audio guías
-
-
-# Exposición temporal
-
+<div class="row">
+	<div class="large-16 columns">
+		<div class="row">
+			<div class="large-8 columns">
+				<div class="panel">
+					<%- @partial('visitar/horario') %>
+				</div>
+			</div>
+			<div class="large-8 columns">
+				<div class="panel">
+					<%- @partial('visitar/precios') %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 

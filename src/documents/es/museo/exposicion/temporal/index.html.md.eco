@@ -11,7 +11,7 @@ menuOrder: 3111
 <div class="panel" style="overflow: hidden;">
    
    <a class="th radius" href="<%= expTemp.url %>" style="float:left; margin-right: 1em;">
-      <img src="<%= @getPathFromUrl(expTemp.url) %>/<%= expTemp.imagenes[0].thumbnail %>">
+      <img src="<%= @getPathFromUrl(expTemp.url) %>/<%= expTemp.imagenes[0].thumbnail %>" alt="<%= expTemp.imagenes[0].titulo %>" title="<%= expTemp.imagenes[0].titulo %>">
    </a>
 
 	<div>

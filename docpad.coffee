@@ -10,8 +10,11 @@ docpadConfig = {
          # Always refresh from server
          maxAge: false  # default
          templateData:
-            baseurl: ""
-            url: "/"
+            baseurl: "/"
+      production:
+         templateData:
+            baseurl: "/maquetaMDCL/"
+          
 			
 
    # Ignore Custom Patterns
@@ -45,14 +48,15 @@ docpadConfig = {
       # https://github.com/sergeche/docpad-plugin-menu#plugin-configuration
       menuOptions:
          optimize: false
+         skipEmpty: false
          #skipFiles:
 
       # -----------------------------
       # Language Definition
 
-      currentLang: 'es'
+      currentLangKK: 'es'
 
-      locale:
+      localeKK:
          en:
             title: 'Julio Gavín Drawing Museum - Castillo de Larrés'
             titleHTML: 'Julio Gavín Drawing Museum <br/> "Castillo de Larrés"'
@@ -109,6 +113,7 @@ docpadConfig = {
                Pirineo:    'PYRÉNÉES'
                Tienda:     'BOUTIQUE'
 
+
       # Specify some site properties
       site:
          # The production url of our website
@@ -143,7 +148,7 @@ docpadConfig = {
          email: "fmanaya@gmail.com"
 
          # Your company's name
-         copyright: "© Amigos de Serrablo 2013"
+         copyright: "© Amigos de Serrablo, 2013"
 
       #fin site
 
@@ -151,34 +156,19 @@ docpadConfig = {
       # ----------------
       getScripts: ->
          scripts = [
-           @baseurl + "/vendor/foundation/js/foundation.min.js",
-           @baseurl + "/scripts/script.js"
+           @baseurl + "vendor/foundation/js/foundation.min.js",
+           @baseurl + "scripts/script.js"
          ]
          return scripts;
 
       getStyles: ->
          styles = [
-           @baseurl + "/styles/style.css"
+           @baseurl + "styles/style.css",
+           @baseurl + "styles/fi/foundation-icons.css",
+           "http://fonts.googleapis.com/css?family=Aldrich/Josefin+Slab:400,600|Quattrocento"           
          ]
          return styles;
 
-
-      getLang: ->
-         urlLang = @getUrlLang()
-         if  urlLang
-            currentLang = urlLang
-         else
-            currentLang = @currentLang.toString()
-         return @locale[currentLang]
-
-      # Get the Absolute URL of a document
-      getUrlLang: ->
-         #  return @site.url + (document.url or document.get?('url'))
-         match = /../i.exec @document.relativePath
-         if match
-            return match[0]
-         else
-            return ''
 
       # Extract file from url
       getPathFromUrl: (url) ->
@@ -200,7 +190,15 @@ docpadConfig = {
         #   yy = '0' + yy
         return dd + '.' + mm + '.' + yy
 
-
+      #resuelve las url del menu
+      getMenuItemUrl: (iturl) ->
+         href=''
+         if (@baseurl != '/') 
+            href = @baseurl + iturl
+         else
+            href = iturl
+         return href
+         
 
       getDocsInCurrentLangKK: ->
          urlLang = match = /../i.exec @document.relativePath
@@ -230,8 +228,12 @@ docpadConfig = {
          @site.keywords.concat(@document.keywords or []).join(', ')
 
 
-
-
+      menuAdapter: (items, parent=null) ->
+         for it, index in items
+            docpad.log("info", index + '-' + it.title + '-' + it.url)
+            if (it.children)
+               @menuAdapter it.children, it
+         return
 
 
 }

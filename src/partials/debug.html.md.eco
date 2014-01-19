@@ -1,0 +1,147 @@
+<hr/>
+
+<div class="section-container accordion" data-section="accordion">
+  <section>
+    <p class="title" data-section-title><a href="#">DEBUG</a></p>
+    <div class="content" data-section-content>
+		<div class="section-container tabs" data-section="tabs">
+		  <section class="active">
+		    <p class="title" data-section-title><a href="#">Configuracion</a></p>
+		    <div class="content" data-section-content>
+				<ul>
+				  <li>**title:** *<%= @document.title %>*</li>
+				  <li>**currentLang:** *<%= @currentLang %>*</li>
+				  <li>**site.title:** *<%=   @site.title %>*</li>
+				  <li>**site.description:** *<%= @site.description %>*</li>
+				  <li>**site.keywords:** *<%= @site.keywords %>*</li>	
+				</ul>
+		    </div>
+		  </section>
+
+		  <section>
+		    <p class="title" data-section-title><a href="#">Metadata</a></p>
+		    <div class="content" data-section-content>
+				<dl>
+				  <dt>**title:** *<%= @document.title %>*</dt>
+				  <dd>The title for the document. Useful for headings.</dd>
+
+				  <dt>**layout:** *<%= @document.layout %>*</dt>
+				  <dd>Tells DocPad what layout to use from the layouts folder. Layout files can use other layouts for advanced layout nesting.<br/>There is no default value. Layouts may have a layout called “default”, but that is just a naming choice, rather than an implicit default.</dd>
+
+				  <dt>**name:** *<%= @document.name %>*</dt>
+				  <dd>Defaults to the filename. The name of the document. Useful for listings.</dd>
+
+				  <dt>**date:** *<%= @document.date %>*</dt>
+				  <dd>Defaults to mtime. Useful for setting a custom date via your documents meta data.</dd>
+
+				  <dt>**slug:** *<%= @document.slug %>*</dt>
+				  <dd>Defaults to a slugified version of the relativeBase. Appears deprecated in favour of url.</dd>
+
+				  <dt>**url:** *<%= @document.url %>*</dt>
+				  <dd>The url that you would like to use as the primary url for the document. When a user accesses a document via a secondary url, the user will be redirected to the primary url automatically.</dd>
+
+				  <dt>**urls:** *<%= @document.urls %>*</dt>
+				  <dd>Urls is the secondary urls for a document. It can be a comma seperated values list, or an array of values.</dd>
+
+				  <dt>**ignored:** *<%= @document.ignored %>*</dt>
+				  <dd>Defaults to false. If set to true, the document will not be parsed. Useful for draft documents.</dd>
+
+				  <dt>**standalone:** *<%= @document.standalone %>*</dt>
+				  <dd>Defaults to false. If set to true, when a change is detected for the document, we will only regenerate this document and not anything else (e.g. documents with referencesOthers set to true).</dd>
+
+				  <dt>**referencesOthers:** *<%= @document.referencesOthers %>*</dt>
+				  <dd>Defaults to false. If set to true, this document will be regenerated when a change occurs in another document. It is automatically set to true whenever a template helper is called that references another document. This makes so for instance on a blog listing page, when a blog post is changed, we will also regenereate the listing as well as the blog post.</dd>
+
+				  <!-- dt>**tags:** *<%= @document.tags %>*</dt>
+				  <dd>Defaults to []. Tags can be a comma separated values list, or an array of values. While DocPad doesn't use tags for anything specifically, it is nice to have it handled uniformly across websites without you having to do it yourself.</dd -->
+
+				  <dt>**dynamic:** *<%= @document.dynamic %>*</dt>
+				  <dd>Defaults to false. If set to true, the document will be re-rendered on each request. This also adds the req object to the template data - req definition here.</dd>
+				</dl>
+
+		    </div>
+		  </section>
+		  <section>
+		    <p class="title" data-section-title><a href="#">Special Attributes</a></p>
+		    <div class="content" data-section-content>
+				<dl>
+				  <dt>**id:** *<%= @document.id %>*</dt>
+				  <dd>The unique document indentifier. Defaults to the cid. When we get the relativePath, we set the id to that instead.</dd>
+				
+				  <dt>**basename:** *<%= @document.basename %>*</dt>
+				  <dd>The file's name without the extension.</dd>
+
+				  <dt>**extension:** *<%= @document.extension %>*</dt>
+				  <dd>The file's last extension. E.g. will be set to eco for the file hello.md.eco.</dd>
+
+				  <dt>**outExtension:** *<%= @document.outExtension %>*</dt>
+				  <dd>The extension used for the output file. Same method as extension however it takes layouts into account as well.</dd>
+
+				  <dt>**extensions:** *<%= @document.extensions %>*</dt>
+				  <dd>The file's extensions as an array. E.g. will be set to ["md","eco"] for the file hello.md.eco.</dd>
+
+				  <dt>**filename:** *<%= @document.filename %>*</dt>
+				  <dd>The file's name with the extension.</dd>
+
+				  <dt>**path:** *<%= @document.path %>*</dt>
+				  <dd>The full path of our source file.</dd>
+
+
+				  <dt>**outPath:** *<%= @document.outPath %>*</dt>
+				  <dd>The full path of our output file.</dd>
+
+				  <dt>**dirPath:** *<%= @document.dirPath %>*</dt>
+				  <dd>The full directory path of our source file.</dd>
+
+				  <dt>**outDirPath:** *<%= @document.outDirPath %>*</dt>
+				  <dd>The full directory path of our output file.</dd>
+
+				  <dt>**outFilename:** *<%= @document.outFilename %>*</dt>
+				  <dd>The file's name with the output extension.</dd>
+
+
+				  <dt>**relativePath:** *<%= @document.relativePath %>*</dt>
+				  <dd>The relative path of our source file.</dd>
+
+				  <dt>**relativeOutPath:** *<%= @document.relativeOutPath %>*</dt>
+				  <dd>The relative path of our output file.</dd>
+
+				  <dt>**relativeDirPath:** *<%= @document.relativeDirPath %>*</dt>
+				  <dd>The relative directory path of our source file.</dd>
+
+				  <dt>**relativeOutDirPath:** *<%= @document.relativeOutDirPath %>*</dt>
+				  <dd>The relative directory path of our output file.</dd>
+				  
+				  
+				  <dt>**relativeBase:** *<%= @document.relativeBase %>*</dt>
+				  <dd>The relative path of our source file without the file's extension.</dd>
+
+				  <dt>**contentType:** *<%= @document.contentType %>*</dt>
+				  <dd>The MIME content-type for the source file.</dd>
+
+				  <dt>**outContentType:** *<%= @document.outContentType %>*</dt>
+				  <dd>The MIME content-type for the output file.</dd>
+
+				  <dt>**ctime:** *<%= @document.ctime %>*</dt>
+				  <dd>The date object for when this file was created.</dd>
+
+				  <dt>**mtime:** *<%= @document.mtime %>*</dt>
+				  <dd>The date object for when this file was modified.</dd>
+
+				  <dt>**encoding:** *<%= @document.encoding %>*</dt>
+				  <dd>The encoding of the file. Either binary or utf8.</dd>
+				  <dt>**source:** *<%= @document.source %>*</dt>
+				  <dd>When encoding isnt binary, this is set to the raw contents of the file, stored as a string.</dd>
+				  <dt>**content:** *<%- @document.content %>*</dt>
+				  <dd>When encoding isnt binary, this is set to the contents of the file, stored as a string. This is used internally during the rendering process, end-users should never use this property, instead they should either source or contentRendered depending on the use case.</dd>
+
+				</dl>
+
+		    </div>
+		  </section>
+		</div>
+    </div>
+  </section>
+ 
+</div>
+

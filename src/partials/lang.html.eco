@@ -2,18 +2,18 @@
 <% if 'es'==@getUrlLang(): %>
 	es
 <% else: %>
-	<a href="<%= @baseurl %>/es/index.html">es</a>
+	<a href="<%= @baseurl %>es/index.html">es</a>
 <% end %>
 |
 <% if 'en'==@getUrlLang(): %>
 	en
 <% else: %>
-	<a href="<%= @baseurl %>/en/index.html">en</a> 
+	<a href="<%= @baseurl %>en/index.html">en</a> 
 <% end %>
 |
 <% if 'fr'==@getUrlLang(): %>
 	fr
 <% else: %>
-	<a href="<%= @baseurl %>/fr/index.html">fr</a> 
+	<a href="<%= @baseurl %>fr/index.html">fr</a> 
 <% end %>
 |

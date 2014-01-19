@@ -4,20 +4,21 @@ layout: mdcl
 isPage: true
 menuOrder: 4
 ---
+<div class="large-10 large-centered columns">
 <div class="slideshow-wrapper">
 	<div class="preloader"></div>
 	<ul id="featured2" data-orbit>
-		<li><img src="<%= @baseurl %>/images/cat/10-ta.png" /><div class="orbit-caption">Nº. Cat. 10</div></li>
-		<li><img src="<%= @baseurl %>/images/cat/20-ta.png" /><div class="orbit-caption">Nº. Cat. 20</div></li>
-		<li><img src="<%= @baseurl %>/images/cat/30-ta.png" /><div class="orbit-caption">Nº. Cat. 30</div></li>
-		<li><img src="<%= @baseurl %>/images/cat/40-ta.png" /><div class="orbit-caption">Nº. Cat. 40</div></li>
-		<li><img src="<%= @baseurl %>/images/cat/50-ta.png" /><div class="orbit-caption">Nº. Cat. 50</div></li>
-		<li><img src="<%= @baseurl %>/images/cat/60-ta.png" /><div class="orbit-caption">Nº. Cat. 60</div></li>
-		<li><img src="<%= @baseurl %>/images/cat/70-ta.png" /><div class="orbit-caption">Nº. Cat. 70</div></li>
-		<li><img src="<%= @baseurl %>/images/cat/80-ta.png" /><div class="orbit-caption">Nº. Cat. 80</div></li>
+		<li><img src="<%= @baseurl %>images/cat/10-ta.png" /><div class="orbit-caption">Nº. Cat. 10. "La petenera", SÁNCHEZ ALGORA, Manuel</div></li>
+		<li><img src="<%= @baseurl %>images/cat/20-ta.png" /><div class="orbit-caption">Nº. Cat. 20. "Colacion", TOPETE (TOPETE DE GRASSA, Juan Bautista), 1984. </div></li>
+		<li><img src="<%= @baseurl %>images/cat/30-ta.png" /><div class="orbit-caption">Nº. Cat. 30. "ALHAMBRA", RUÍZ RUÍZ, Manuel, 1985</div></li>
+		<li><img src="<%= @baseurl %>images/cat/40-ta.png" /><div class="orbit-caption">Nº. Cat. 40. "Los caracoles", Sixto, Marco, 1974</div></li>
+		<li><img src="<%= @baseurl %>images/cat/54-ta.png" /><div class="orbit-caption">Nº. Cat. 54. "Actriz", PAPAGUEORGUIU, Dimitri, 1985</div></li>
+		<li><img src="<%= @baseurl %>images/cat/61-ta.png" /><div class="orbit-caption">Nº. Cat. 61, Sin título, VALDEÓN (García Valdeón, Fernando)</div></li>
+		<li><img src="<%= @baseurl %>images/cat/70-ta.png" /><div class="orbit-caption">Nº. Cat. 70, "Don Nicanor tocando el tambor", MARCOIDA (Rodriguez Marcoida, Antonio), 1984</div></li>
+		<li><img src="<%= @baseurl %>images/cat/80-ta.png" /><div class="orbit-caption">Nº. Cat. 80, Sin título, CORTIJO (CORTIJO, Paco)</div></li>
 	</ul>
 </div>
-
+</div>
 
 
 # Obra

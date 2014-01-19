@@ -9,14 +9,12 @@ layout: page
 	<div class="full-width content-area">
 	    <div class="row">
 
-			<div class="large-14 columns">
+			<div class="large-16 columns">
 			
 				<%- @content %>
 				
 			</div>
-	        <div class="small-1 large-2 columns"> 
-				
-	        </div>
+	       
 	    </div>
 	</div>
 

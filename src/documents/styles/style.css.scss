@@ -2,8 +2,6 @@
 @import "vendor/settings";
 @import "vendor/foundation";
 
-@import url(http://fonts.googleapis.com/css?family=Aldrich/Josefin+Slab:400,600|Quattrocento);
-
 .header-area {
   background-color: $topbar-bg-color;
   color: rgb(156, 142, 142);
@@ -15,14 +13,73 @@
 /*  min-height: 50px;
   padding: 20px 0 0 0; */
 }
+.footer-area ul.home-social {
+  display: block;
+  float: right;
+  margin-bottom: 8px;
+}
+.footer-area ul.home-social {
+  display: block;
+  float: right;
+  margin-bottom: 8px;
+}
+
+.footer-area ul.home-social li:first-child {
+  margin-left: 0;
+}
+.footer-area ul.home-social li {
+  list-style: none;
+  display: block;
+  font-weight: 700;
+  font-size: 2.5em;
+  float: left;
+  margin-left: 10px;
+}
+
+.copyright {
+  margin-right: 16px;
+}
+
+
+.footer-area ul.links {
+  margin-top: 10px;
+  display: inline-block;
+}
+.footer-area ul.links li {
+  display: block;
+  float: left;
+  margin-left: 6px;
+  font-family: "Proxima Nova Condensed", "proxima-nova-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.875em;
+}
 
 
 
 
-h1 {font-family: 'Aldrich', sans-serif; font-weight: 400; }
+body {
+  margin: 0 0 100px; /* bottom = footer height */
+}
+.debug-area {
+//  background-color: $topbar-bg-color;
+  color: rgb(156, 142, 142);
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+}
+
+
+
+
+h1 h2 h3 h4 {font-family: 'Aldrich', sans-serif; font-weight: 400; }
 .top-bar-section {font-family: 'Aldrich', sans-serif; font-weight: 400; }
 
 
+.ppag {
+  font-size: small;
+}
 /*
 $button-bg: #eb974e;
 
@@ -82,3 +139,12 @@ background: #3D3C3C;
     }
   }
   */
+ 
+@media #{$topbar-media-query} {
+
+  .itemHide {
+    display: none;
+  }
+
+
+}

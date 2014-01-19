@@ -5,7 +5,7 @@ isPage: true
 menuOrder: 1
 ---
 
- <img src="<%= @baseurl %>/images/logoG.jpg" />
+ <img src="<%= @baseurl %>images/logoG.jpg" />
  
  
 If <span data-tooltip class="has-tip" data-options="disable-for-touch:true" title="Tooltips are awesome, You should totally use them!"> " Friends of Serrablo " </span> was founded with the goal because he got some time to rescue from ruin a group of Mozarabic churches , continued with the creation of a Museum where safeguarding the old popular culture that was passing away , it can be said that already at maturity achieves its third great achievement, perhaps larger , a Museum of Drawing .

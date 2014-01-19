@@ -5,7 +5,7 @@ isPage: true
 menuOrder: 1
 ---
 
- <img src="<%= @baseurl %>/images/logoG.jpg" />
+ <img src="/images/logoG.jpg" />
  
 Si <span data-tooltip class="has-tip" data-options="disable-for-touch:true" title="Tooltips are awesome, you should totally use them!">“Amigos de Serrablo”</span> se fundó con el objetivo, ya conseguido hace tiempo, de rescatar de la ruina un grupo de iglesias mozárabes, continuó con la creación de un Museo donde salvaguardar la vieja cultura popular que estaba feneciendo, puede decirse que ya en su madurez consigue alcanzar su tercer gran logro, quizá el de mayor envergadura, un Museo de Dibujo.
 

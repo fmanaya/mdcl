@@ -1,0 +1,33 @@
+{
+    "name": "docpad-plugin-mdcli18n",
+    "version": "2.0.0",
+    "description": "DocPad plugin that adds the ability to render Something to Something Else",
+    "homepage": "https://github.com/yourgithubusername/docpad-plugin-mdcli18n",
+    "keywords": [
+        "docpad",
+        "docpad-plugin",
+        "i18n",
+        "locale"
+    ],
+    "author": "Copyright holders name <copyright holder's email> (copyright holder's website url)",
+    "maintainers": [
+        "Your name <your email> (your github url)"
+    ],
+    "contributors": [
+        "Your name <your email> (your github url)"
+    ],
+    "bugs": {
+        "url": "https://github.com/yourgithubusername/docpad-plugin-mdcli18n/issues"
+    },
+    "repository" : {
+        "type": "git",
+        "url": "https://github.com/yourgithubusername/docpad-plugin-mdcli18n.git"
+    },
+    "engines" : {
+        "node": ">=0.8"
+    },
+    "peerDependencies": {
+        "docpad": "6"
+    },
+    "main": "./src/mdcli18n.plugin.coffee"
+}
