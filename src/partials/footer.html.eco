@@ -8,7 +8,7 @@
 						<li> | </li>
 						<li><a href="#">Patrocinio</a></li>
 						<li> | </li>
-						<li><a href="#">Equipo</a></li>
+						<li><a href="<%- @baseurl + @getUrlLang() + '/equipo.html' %>">Equipo</a></li>
 						<li> | </li>
 						<li><a href="/contact">Contact</a></li>
 						<li> | </li>
@@ -17,7 +17,7 @@
 				</div>
 				<div class="large-6 columns">
 					<ul class="home-social">
-						<li><a href="/contact" class="fi-mail"></a></li>
+						<li><a href="<%- @baseurl + @getUrlLang() + '/contacto.html' %>" class="fi-mail"></a></li>           <!-- TODO: revisar enlace int.-->
 						<li><a href="http://www.facebook.com/AmigosSerrablo" class="fi-social-facebook"></a></li>
 						<li><a href="http://www.twitter.com/ZURB" class="fi-social-twitter"></a></li>
 					</ul>

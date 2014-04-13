@@ -1,0 +1,74 @@
+---
+title: "Equipo"
+layout: mdcl
+isMenuFooter: true
+menuOrder: 2
+---
+
+<h2>El equipo</h2>
+
+<div class="row">
+	<div class="large-2 columns">&nbsp;</div>
+	<div class="large-4 columns">
+		<img src="http://placekitten.com/g/200/200" />	
+	</div>
+	<div class="large-8 columns">
+		<h3>Miguel Servet</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales tortor tellus, commodo pretium tortor tincidunt non.</p>
+	</div>
+	<div class="large-2 columns">&nbsp;</div>
+</div>
+
+<div class="row">
+	<div class="large-2 columns">&nbsp;</div>
+	<div class="large-12 columns"><hr/></div>
+	<div class="large-2 columns">&nbsp;</div>
+</div>
+
+<div class="row">
+	<div class="large-2 columns">&nbsp;</div>
+	<div class="large-4 columns">
+		<img src="http://placedog.com/g/200/200" alt="" />  
+	</div>
+	<div class="large-8 columns">
+		<h3>Joaquin Costa</h3>
+		<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque vehicula tortor dictum dictum vestibulum.</p>
+	</div>
+	<div class="large-2 columns">&nbsp;</div>
+</div>
+
+<div class="row">
+	<div class="large-2 columns">&nbsp;</div>
+	<div class="large-12 columns"><hr/></div>
+	<div class="large-2 columns">&nbsp;</div>
+</div>
+
+<div class="row">
+	<div class="large-2 columns">&nbsp;</div>
+	<div class="large-4 columns">
+		<img src="http://placekitten.com/g/200/200" />	
+	</div>
+	<div class="large-8 columns">
+		<h3>Miguel Fleta</h3>
+		<p>Maecenas posuere non turpis ut mollis. Mauris nec erat mauris. Donec venenatis magna id nisi eleifend, at commodo est interdum.</p>
+	</div>
+	<div class="large-2 columns">&nbsp;</div>
+</div>
+
+<div class="row">
+	<div class="large-2 columns">&nbsp;</div>
+	<div class="large-12 columns"><hr/></div>
+	<div class="large-2 columns">&nbsp;</div>
+</div>
+
+<div class="row">
+	<div class="large-2 columns">&nbsp;</div>
+	<div class="large-4 columns">
+		<img src="http://placedog.com/g/200/200" alt="" />  
+	</div>
+	<div class="large-8 columns">
+		<h3>Jose Antonio Labordeta</h3>
+		<p>Nulla vitae eros bibendum, lacinia ante nec, lacinia elit. Nam semper dictum lorem. Proin in nisl dui. Aliquam vitae ullamcorper tortor, ut ultrices nisl. Nunc rutrum tempus metus vitae pretium.</p>
+	</div>
+	<div class="large-2 columns">&nbsp;</div>
+</div>

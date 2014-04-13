@@ -11,6 +11,7 @@ docpadConfig = {
          maxAge: false  # default
          templateData:
             baseurl: "/"
+         frontendDebug: true          
       production:
          templateData:
             baseurl: "/maquetaMDCL/"
@@ -29,6 +30,13 @@ docpadConfig = {
          @getCollection("html").findAll({isPage:true, url: $startsWith:  '/en/' })
       getDocsInLangFR:  ->
          @getCollection("html").findAll({isPage:true, url: $startsWith:  '/fr/' })
+
+      getFooterMenuES:  ->
+         @getCollection("html").findAll({isMenuFooter:true, url: $startsWith:  '/es/' })
+      getFooterMenuEN:  ->
+         @getCollection("html").findAll({isMenuFooter:true, url: $startsWith:  '/en/' })
+      getFooterMenuFR:  ->
+         @getCollection("html").findAll({isMenuFooter:true, url: $startsWith:  '/fr/' })
 
       # url: $startsWith: '/' + @currentLang
       # <% for it in  @getCollection("html").findAll({ url: $startsWith: '/es' + '/' }).toJSON(): %>
@@ -51,67 +59,6 @@ docpadConfig = {
          skipEmpty: false
          #skipFiles:
 
-      # -----------------------------
-      # Language Definition
-
-      currentLangKK: 'es'
-
-      localeKK:
-         en:
-            title: 'Julio Gavín Drawing Museum - Castillo de Larrés'
-            titleHTML: 'Julio Gavín Drawing Museum <br/> "Castillo de Larrés"'
-            slogan: 'The definitive front-end performance guide'
-            url: 'http://browserdiet.com/en'
-            htmlLang: 'en-US'
-            credits: ''
-            menu:
-               Home: 'Julio Gavín Drawing Museum'
-               Visita: 'VISIT'
-               Museo: 'MUSEUM'
-               Objetivos: 'GOALS'
-               Historia: 'HISTORY'
-               Coleccion:  'COLLECTION'
-               Biblioteca: 'LIBRARY'
-               Educacion:  'EDUCATION'
-               Comunidad:  'COMMUNITY'
-               Pirineo:    'PYRENEES'
-               Tienda:     'SHOP'
-               Acerca:     'About'
-         es:
-            title: 'Museo de Dibujo Julio Gavín - Castillo de Larrés'
-            titleHTML: 'Museo de Dibujo Julio Gavín - "Castillo de Larrés"'
-            slogan: 'La guía definitiva para el rendimiento front-end'
-            url: 'http://browserdiet.com'
-            htmlLang: 'es-ES'
-            credits: ''
-            menu:
-               Home: 'Museo de Dibujo Julio Gavín'
-               Visita: 'VISITAR'
-               Museo: 'MUSEO'
-               Coleccion: 'COLECCIÓN'
-               Biblioteca: 'BIBLIOTECA'
-               Educacion: 'EDUCACIÓN'
-               Comunidad: 'COMUNIDAD'
-               Pirineo: 'PIRINEO'
-               Tienda: 'TIENDA'
-               Acerca:     'ACERCA DE'
-         fr:
-            title: 'Julio Gavín Dessin Musée - Castillo de Larrés'
-            titleHTML: 'Julio Gavín Dessin Musée - "Castillo de Larrés"'
-            slogan: 'Le guide ultime des performances côté client'
-            url: 'http://browserdiet.com/fr'
-            htmlLang: 'fr-FR'
-            credits: ''
-            menu:
-               Home: 'Julio Gavín Dessin Musée'
-               Visita: 'VISITER'
-               Museo: 'MUSEE'
-               Coleccion:  'COLLECTION'
-               Biblioteca: 'BIBLIOTHÈQUE'
-               Educacion:  'ÉDUCATION'
-               Comunidad:  'COMMUNAUTÉ'
-               Pirineo:    'PYRÉNÉES'
-               Tienda:     'BOUTIQUE'
 
 
       # Specify some site properties
@@ -178,17 +125,17 @@ docpadConfig = {
          kk.join('/') 
       # Formatea fecha
       getDateFormatted: (dt) ->
-        dd = dt.getDate()
-        if ( dd < 10 ) 
-           dd = '0' + dd
-        mm = dt.getMonth()+1
-        if ( mm < 10 ) 
-           mm = '0' + mm
-        yy = dt.getFullYear() 
-        #yy = dt.getFullYear() % 100
-        #if ( yy < 10 ) 
-        #   yy = '0' + yy
-        return dd + '.' + mm + '.' + yy
+         dd = dt.getDate()
+         if ( dd < 10 ) 
+            dd = '0' + dd
+         mm = dt.getMonth()+1
+         if ( mm < 10 ) 
+            mm = '0' + mm
+         yy = dt.getFullYear() 
+         #yy = dt.getFullYear() % 100
+         #if ( yy < 10 ) 
+         #   yy = '0' + yy
+         return dd + '.' + mm + '.' + yy
 
       #resuelve las url del menu
       getMenuItemUrl: (iturl) ->
@@ -235,7 +182,12 @@ docpadConfig = {
                @menuAdapter it.children, it
          return
 
-
+   events:
+      # Extend server so it can respond to cache-reset assets
+      serverAfter: ({server}) ->
+         server.get /^\/\d+\/(c|j)\//, (req, res, next) ->
+            req.url = req.url.replace /^\/\d+\//, '/'
+            next()
 }
 
 # Export the DocPad Configuration

@@ -43,6 +43,8 @@ module.exports = (BasePlugin) ->
                   Pirineo:    'PYRENEES'
                   Tienda:     'SHOP'
                   Acerca:     'About'
+                  Equipo:     'Team'
+                  Contacto:     'Contact'
             es:
                title: 'Museo de Dibujo Julio Gavín - Castillo de Larrés'
                titleHTML: 'Museo de Dibujo Julio Gavín - "Castillo de Larrés"'
@@ -62,6 +64,8 @@ module.exports = (BasePlugin) ->
                   Pirineo: 'PIRINEO'
                   Tienda: 'TIENDA'
                   Acerca:     'ACERCA DE'
+                  Equipo:     'Equipo'
+                  Contacto:     'Contacto'
                   
             fr:
                title: 'Julio Gavín Dessin Musée - Castillo de Larrés'
@@ -80,6 +84,9 @@ module.exports = (BasePlugin) ->
                   Comunidad:  'COMMUNAUTÉ'
                   Pirineo:    'PYRÉNÉES'
                   Tienda:     'BOUTIQUE'
+                  Acerca:     'AU SUJET'
+                  Equipo:     'Équipe'
+                  Contacto:     'Contacter'
          }
 
          #helpers

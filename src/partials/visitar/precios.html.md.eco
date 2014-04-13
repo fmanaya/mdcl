@@ -2,4 +2,23 @@
 - **Entrada ordinaria:** 3 €
 - **Niños:** Gratis (Hasta 8 años)
 - **Grupos:** 2 € (A partir de 10 personas)
-- Socios de Amigos de Serrablo y mecenas tienen entrada gratuita.
+-  tienen entrada gratuita.
+
+<ul class="pricing-table">
+  <li class="title">General</li>
+  <li class="price">3 €</li>
+  <li class="description">ion</li>
+</ul>
+<ul class="pricing-table">
+  <li class="title">Gratis</li>
+  <li class="price">0 €</li>
+  <li class="description">Hasta los 8 años</li>
+  <li class="bullet-item">Niños hasta 8 años.</li>
+  <li class="bullet-item">Socios de Amigos de Serrablo y padrinos/madrinas.</li>
+</ul>
+<ul class="pricing-table">
+  <li class="title">Grupos</li>
+  <li class="price">2 €</li>
+  <li class="description">A partir de 10 personas</li>
+  <li class="bullet-item">20 Users</li>
+</ul>

@@ -14,7 +14,7 @@
 <!-- Define `renderMenu` partial -->
 <% renderMenu = (items, nivel=1) => %>
 <section class="top-bar-section">
-	<ul class="right">
+	<ul>
 		<% for item in items: %>
 			<!-- li<% if item.state: %> class="active"<% end %> -->
 			<li class="divider"></li>
@@ -39,7 +39,7 @@
 
 <!-- MENU -->
 <nav class="top-bar"  data-options="mobile_show_parent_link: true">
-	<ul class="title-area">
+	<ul class="title-area hide-for-large-up">
 		<!-- Title Area -->
 		<li class="name">
 			<h1><a href="<%= @baseurl %><%= @getUrlLang() %>/index.html"> <%= @locale.menu.Home %> </a></h1>

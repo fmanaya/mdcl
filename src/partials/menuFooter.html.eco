@@ -1,0 +1,13 @@
+
+
+	<%= @menuAdapter(@menuItems) %>
+	<ul class="links">
+		<% for item,i in @menuItems: %>
+			<li><a href="<%- @getMenuItemUrl(item.url) %>"><%= @locale.menu[item.title] %></a></li>
+			
+			<% if i+1 < @menuItems.length: %>
+				<li> | </li>
+			<% end %>			
+			
+		<% end %>
+	</ul>

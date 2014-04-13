@@ -1,8 +1,8 @@
 ---
 title: "Acerca"
 layout: mdcl
-isPage: true
-menuOrder: 10
+isMenuFooter: true
+menuOrder: 2
 ---
 
 I like long walks on the beach. **Plus I rock at DocPad!**
